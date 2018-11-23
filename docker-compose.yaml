@@ -1,0 +1,11 @@
+version: '3'
+services:
+  robot_motion_control_dev:
+    build: .
+    image: "robot_motion_control:robot_motion_control_dev"
+    container_name: robot_motion_control_dev
+    command: "/bin/bash"
+    stdin_open: true
+    tty: true
+    volumes:
+    - ./src:/root/ws_robot_motion_control/src
